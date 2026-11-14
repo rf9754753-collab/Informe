@@ -1,0 +1,297 @@
+/* ============================================================
+   RESET Y BASE
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: #d9d9d9;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  color: #000;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ============================================================
+   HOJA TAMAÑO CARTA (21.59 cm x 27.94 cm)
+   ============================================================ */
+.hoja {
+  width: 21.59cm;
+  height: 27.94cm;
+  background: #ffffff;
+  margin: 0 auto 20px auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+
+  /* Márgenes UNEFA */
+  padding-top: 3cm;
+  padding-bottom: 3cm;
+  padding-left: 4cm;
+  padding-right: 3cm;
+}
+
+/* ============================================================
+   PORTADA
+   ============================================================ */
+.portada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Logos superiores */
+.logos-portada {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8cm;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+/* Encabezado institucional */
+.encabezado-institucional {
+  text-align: center;
+  font-size: 12pt;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin-bottom: 2cm;
+}
+
+.encabezado-institucional p {
+  margin: 0;
+}
+
+/* Título central */
+.titulo-portada {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.titulo-portada h1 {
+  font-size: 24pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+/* Firmas inferiores */
+.firmas-portada {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+  padding: 0 0.5cm;
+}
+
+.firma {
+  text-align: center;
+  font-size: 12pt;
+  line-height: 1.4;
+}
+
+.firma p {
+  margin: 0;
+}
+
+/* ============================================================
+   CONTENIDO – TEXTO JUSTIFICADO CON SANGRÍA
+   ============================================================ */
+.contenido p {
+  text-align: justify;
+  text-justify: inter-word;
+  text-indent: 1.25cm;
+  margin-bottom: 0.4cm;
+  line-height: 1.5;
+}
+
+.contenido h2,
+.contenido h3 {
+  text-align: left;
+  font-weight: bold;
+  margin-top: 0.5cm;
+  margin-bottom: 0.3cm;
+  line-height: 1.4;
+}
+
+.contenido h2 {
+  font-size: 14pt;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contenido h3 {
+  font-size: 12pt;
+}
+
+/* Listas */
+.contenido ul {
+  margin: 0.2cm 0 0.4cm 1.25cm;
+  padding-left: 0.6cm;
+}
+
+.contenido ul li {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 0.25cm;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   TABLA DE CATEGORÍAS
+   ============================================================ */
+.tabla-categorias {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.4cm 0 0.6cm 0;
+  font-size: 11pt;
+  line-height: 1.3;
+}
+
+.tabla-categorias th,
+.tabla-categorias td {
+  border: 1px solid #333;
+  padding: 6px 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tabla-categorias th {
+  background: #eaeaea;
+  font-weight: bold;
+}
+
+.tabla-categorias td:last-child,
+.tabla-categorias th:last-child {
+  text-align: left;
+}
+
+/* ============================================================
+   NUMERACIÓN DE PÁGINAS (solo hojas de contenido)
+   ============================================================ */
+.contenido {
+  counter-reset: pagina;
+}
+
+.pagina {
+  counter-increment: pagina;
+}
+
+.pagina::after {
+  content: counter(pagina);
+  position: absolute;
+  bottom: 1.2cm;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12pt;
+  font-family: 'Times New Roman', Times, serif;
+  color: #000;
+}
+
+/* ============================================================
+   RESPONSIVE – CELULARES
+   ============================================================ */
+@media screen and (max-width: 900px) {
+  body {
+    padding: 10px 0;
+    align-items: stretch;
+  }
+
+  .hoja {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    margin: 0 0 12px 0;
+    padding: 1.2cm 1cm 1.6cm 1.2cm;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .portada {
+    min-height: 90vh;
+  }
+
+  .titulo-portada h1 {
+    font-size: 18pt;
+  }
+
+  .tabla-categorias {
+    font-size: 9pt;
+  }
+
+  .tabla-categorias th,
+  .tabla-categorias td {
+    padding: 4px 3px;
+  }
+
+  .pagina::after {
+    bottom: 0.6cm;
+    font-size: 11pt;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tabla-categorias {
+    font-size: 8pt;
+  }
+
+  .encabezado-institucional {
+    font-size: 10pt;
+  }
+
+  .titulo-portada h1 {
+    font-size: 16pt;
+  }
+}
+
+/* ============================================================
+   IMPRESIÓN – respeta tamaño carta y saltos de página
+   ============================================================ */
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+
+  .hoja {
+    box-shadow: none;
+    margin: 0;
+    page-break-after: always;
+    break-after: page;
+    width: 21.59cm;
+    height: 27.94cm;
+  }
+
+  .hoja:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  @page {
+    size: 21.59cm 27.94cm; /* Carta */
+    margin: 0;
+  }
+}

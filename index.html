@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informe UNEFA - Par Trenzado</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ============ HOJA 1: PORTADA ============ -->
+  <section class="hoja portada">
+    <header class="logos-portada">
+      <img src="Logo-Unefa.png" alt="Logo UNEFA" class="logo">
+      <img src="Logo-Unefa.png" alt="Logo UNEFA" class="logo">
+    </header>
+
+    <div class="encabezado-institucional">
+      <p>REPÚBLICA BOLIVARIANA DE VENEZUELA</p>
+      <p>MINISTERIO DEL PODER POPULAR PARA LA DEFENSA</p>
+      <p>UNIVERSIDAD NACIONAL EXPERIMENTAL POLITÉCNICA</p>
+      <p>DE LA FUERZA ARMADA NACIONAL</p>
+      <p>UNEFA – NÚCLEO GUÁRICO</p>
+      <p>INGENIERÍA DE SISTEMAS – VIII SEMESTRE</p>
+    </div>
+
+    <div class="titulo-portada">
+      <h1>Par Trenzado</h1>
+    </div>
+
+    <div class="firmas-portada">
+      <div class="firma">
+        <p><strong>Profesor:</strong></p>
+        <p>Raúl Blanca</p>
+      </div>
+      <div class="firma">
+        <p><strong>Bachiller:</strong></p>
+        <p>Rafael Flores</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTENIDO (hojas con numeración) ============ -->
+  <main class="contenido">
+
+    <!-- HOJA 2 -->
+    <section class="hoja pagina">
+      <h2>Introducción al par trenzado</h2>
+      <p>
+        El cable de par trenzado es el medio de transmisión guiado más utilizado en redes
+        de área local (LAN) y telefonía. Consiste en pares de hilos de cobre aislados que
+        se entrelazan entre sí en forma helicoidal para reducir la interferencia
+        electromagnética (EMI) y la diafonía (crosstalk) entre pares adyacentes.
+      </p>
+      <p>
+        Como se observa en la sección transversal, la diferencia principal entre sus
+        variantes radica en el nivel de apantallamiento (shielding) que rodea a los
+        conductores o al conjunto del cable.
+      </p>
+
+      <h3>Tipos según su blindaje</h3>
+      <ul>
+        <li>
+          <strong>UTP (Unshielded Twisted Pair):</strong> Sin blindaje adicional; solo cuenta
+          con el aislamiento plástico de cada hilo y la cubierta exterior (sheath). Es
+          económico, flexible y estándar en oficinas y hogares, pero más vulnerable al
+          ruido eléctrico.
+        </li>
+        <li>
+          <strong>FTP / S/UTP (Foiled / Screened Unshielded Twisted Pair):</strong> Incorpora
+          una lámina o malla global (cable shield) que envuelve a los cuatro pares juntos,
+          mejorando la protección contra interferencias externas sin blindar cada par por
+          separado.
+        </li>
+        <li>
+          <strong>STP (Shielded Twisted Pair):</strong> Cada par trenzado cuenta con su propia
+          lámina metálica individual (pair shield), lo que elimina casi por completo la
+          diafonía interna entre hilos.
+        </li>
+        <li>
+          <strong>S/STP o S/FTP (Screened/Shielded Twisted Pair):</strong> Combina el blindaje
+          individual por cada par con una malla o lámina global exterior. Ofrece la máxima
+          inmunidad al ruido para entornos industriales o centros de datos.
+        </li>
+      </ul>
+    </section>
+
+    <!-- HOJA 3 -->
+    <section class="hoja pagina">
+      <h3>Categorías principales (Estándar TIA/EIA)</h3>
+
+      <table class="tabla-categorias">
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Ancho de banda</th>
+            <th>Velocidad máxima</th>
+            <th>Distancia máx.</th>
+            <th>Uso habitual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cat 5e</td>
+            <td>100 MHz</td>
+            <td>1 Gbps</td>
+            <td>100 m</td>
+            <td>Redes domésticas y oficinas básicas</td>
+          </tr>
+          <tr>
+            <td>Cat 6</td>
+            <td>250 MHz</td>
+            <td>1 Gbps (10 Gbps hasta 55 m)</td>
+            <td>100 m</td>
+            <td>Redes empresariales estándar</td>
+          </tr>
+          <tr>
+            <td>Cat 6A</td>
+            <td>500 MHz</td>
+            <td>10 Gbps</td>
+            <td>100 m</td>
+            <td>Centros de datos y enlaces de alto tráfico</td>
+          </tr>
+          <tr>
+            <td>Cat 7 / 7A</td>
+            <td>600 – 1000 MHz</td>
+            <td>10 – 40 Gbps</td>
+            <td>100 m</td>
+            <td>Infraestructura troncal (backbone) blindada</td>
+          </tr>
+          <tr>
+            <td>Cat 8</td>
+            <td>2000 MHz</td>
+            <td>25 – 40 Gbps</td>
+            <td>30 m</td>
+            <td>Interconexión de servidores (switch-to-server)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Estándares de cableado y conectores</h3>
+      <p>
+        Utiliza habitualmente el conector RJ-45 (8P8C) para datos y RJ-11 para telefonía.
+        La ordenación de los 8 hilos (código de colores: naranja, verde, azul y marrón con
+        sus respectivos blancos) se rige por dos normas:
+      </p>
+      <p>
+        <strong>T568A y T568B:</strong> Definen la posición exacta de cada pin. Si ambos
+        extremos usan la misma norma (generalmente T568B), se obtiene un cable directo
+        (straight-through) para conectar equipos distintos (PC a switch). Si un extremo
+        usa T568A y el otro T568B, se obtiene un cable cruzado (crossover) para conectar
+        equipos iguales.
+      </p>
+    </section>
+
+    <!-- HOJA 4 -->
+    <section class="hoja pagina">
+      <h3>Ventajas y desventajas</h3>
+
+      <p><strong>Ventajas:</strong> Bajo costo por metro, facilidad de instalación y
+        terminación, gran flexibilidad física y alta compatibilidad con infraestructura
+        Ethernet existente.</p>
+
+      <p><strong>Desventajas:</strong> Atenuación significativa a partir de los 100 metros
+        (requiere repetidores o switches intermedios) y mayor susceptibilidad a
+        interferencias electromagnéticas en comparación con la fibra óptica.</p>
+    </section>
+
+  </main>
+
+</body>
+</html>
